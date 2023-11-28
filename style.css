@@ -1,0 +1,444 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: 'sora', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #06121e;
+}
+
+button {
+    font-family: 'sora', sans-serif;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+}
+
+/* ----------------------------- */
+
+.bg-home {
+    position: relative;
+}
+
+.bg-home::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("./assets/bg.svg");
+    /*Serve p/ mesclar a img de fundo*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+/* ------------------------------ */
+
+.hero {
+    color: #fff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+}
+
+.h1-hero {
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 46px;
+}
+
+.p-hero {
+    text-align: center;
+    margin: 14px 0;
+}
+
+.button-contact {
+    padding: 14px 28px;
+    color: #fff;
+    background-color: #d94140;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.button-contact:hover {
+    animation: scalebutton 0.8s alternate infinite;
+}
+
+@keyframes scalebutton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Dá espaçamento entre os itens*/
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+    /* Responsavel por deixar alinhado ao centro na largura de 1440*/
+}
+
+i {
+    color: #FFF;
+}
+
+.header-icons {
+    display: flex;
+    gap: 14px;
+}
+
+i:hover {
+    animation: translateY 0.8s infinite alternate;
+    /* para não rodar a animação uma vez só*/
+    color: #d34040;
+}
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+        /* posição onde inicia o icone */
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+        /* posição onde termina o icone */
+    }
+}
+
+.header-button {
+    border: 1px solid #fff;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    /* Quando fizer a transição ele irá aplicar*/
+}
+
+.header-button:hover {
+    border: 1px solid #d34040;
+    background-color: #d34040;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------------------- */
+
+
+
+@media screen and (max-width:768px) {
+
+    .header-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i {
+        margin-top: 16px;
+        font-size: 34px;
+    }
+
+    .header-logo {
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 40vh;
+    }
+
+    .h1-hero {
+        font-size: 34px;
+        padding: 0 14px;
+        width: 100%;
+    }
+
+    .p-hero {
+        font-size: 14px;
+    }
+
+    /* --------------------------------- */
+
+}
+
+@media screen and (max-width:480px) {
+
+    .h1-hero {
+        font-size: 24px;
+    }
+
+    .p-hero {
+        font-size: 12px;
+    }
+
+}
+
+/* -------------------------------------- */
+
+.about {
+    background-color: #06121e;
+    overflow: hidden;
+    color: #fff;
+}
+
+.barber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-barbearia {
+    max-width: 570px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+}
+
+.about-content div {
+    /* não preciso estipular tamanhos, estou dizendo que cada div irá preencher um tamanho da tela*/
+    flex: 1;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+
+.funcionamento-about {
+    margin-top: 20px;
+    margin-bottom: 14px;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+/* ----------------------------------- */
+
+.services {
+    background: #FFF;
+    color: #232224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 54px 14px;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Dá espaçamento entre os itens*/
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+    /* Responsavel por deixar alinhado ao centro na largura de 1440*/
+    flex-direction: column;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.text-services {
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.haircuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.haircut {
+    flex: 1;
+    /* Vão tentar se encaixar na tela sem que eu fique ditando tamanhos*/
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    /*CASO A IMG PASSE PARA FORA DO ELEMNTO ELE IRÁ ESCONDER*/
+}
+
+.asset-harcut {
+    width: 100%;
+    max-width: 354px;
+    transition: transform 0.2s;
+}
+
+.asset-harcut:hover {
+    transform: scale(1.2);
+    /* Faz o efeito de dar zoom na img*/
+    z-index: 1;
+}
+
+.haircut-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* cada item no seu canto dentro da div, ou seja, um do lado direito e outro do lado esquerdo*/
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+button {
+    color: #FFF;
+    background-color: #d94140;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    .haircuts {
+        flex-direction: column;
+    }
+
+}
+
+/* ----------------------------------------------- */
+
+
+/*-----FOTER------*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: #FFF;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 8px;
+    color: #FFF;
+}
+
+@media screen and (max-width: 600px) {
+    .direitos {
+        max-width: 200px;
+        display: flex;
+        text-align: center;
+        font-size: 10px;
+
+    }
+}
+
+/*--------------------------------*/
+
+.wpp-button {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 6;
+}
+
+.img-wpp {
+    max-width: 74px;
+    transition: transform 0.4s;
+}
+
+.img-wpp:hover {
+    transform: scale(1.1);
+    /* Responsavel por aumentar o tamanho da img ao passar o mouse*/
+}
+
+.wpp-button .tooltip-text {
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #232224;
+    color: #FFF;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.wpp-button:hover .tooltip-text {
+    /* Estou acessando o botão e então indo ate o span */
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    .img-wpp {
+        max-width: 64px;
+    }
+}
