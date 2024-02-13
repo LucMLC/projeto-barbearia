@@ -5,8 +5,8 @@
 <br>
 <h1>Barbearia Teste</h1> 
 <br>
-<img src="./assets/Captura de tela 2024-02-13 160617.png">
-<img src="./assets/Captura de tela 2024-02-13 160652.png">
+<img src="./assets/Captura de tela 2024-02-13 163455.png">
+<img src="./assets/Captura de tela 2024-02-13 163527.png">
 <br>
 <p>Este é um site de teste para uma barbearia fictícia. Ele apresenta informações sobre os serviços oferecidos, equipe, galeria de fotos e formas de contato. O site foi desenvolvido usando HTML, CSS e JavaScript.</p>
 
